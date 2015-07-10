@@ -26,5 +26,5 @@ function throws(fn) {
     } catch (err) {
         return err;
     }
-    return false;
+    return undefined;
 }
