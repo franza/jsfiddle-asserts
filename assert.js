@@ -19,3 +19,12 @@ assert.finish = function () {
         console.log('%s tests succeeded, %s tests failed. Failed tests:\n%s', assert.succeeded, assert.fails.length, messages);
     }
 }
+
+function throws(fn) {
+    try {
+        fn();
+    } catch (err) {
+        return err;
+    }
+    return false;
+}
